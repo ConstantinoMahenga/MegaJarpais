@@ -1,0 +1,135 @@
+#about {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+  }
+  
+  #about h2 {
+    font-size: 2.5rem;
+    color: #0f3d0f;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .carousel-container {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: justify;
+  }
+  
+  .text-container h3 {
+    font-size: 1.8rem;
+    color: #0edf0e;
+    margin-bottom: 1rem;
+  }
+  
+  .text-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .text-container h3 {
+    font-size: 1.8rem;
+    color: #0edf0e;
+    margin-bottom: 1rem;
+    display: inline-block; /* Garantir que a largura seja apenas a do texto */
+    position: relative; /* Necessário para o pseudo-elemento */
+  }
+  
+  .text-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta a posição da linha */
+    left: 0;
+    width: 100%; /* A linha terá o mesmo comprimento que o texto */
+    height: 4px; /* Espessura da linha */
+    background-color: #0edf0e; /* Cor da linha */
+    border-radius: 2px; /* Arredondar as bordas da linha */
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .carousel-container,
+    .text-container {
+      max-width: 100%;
+    }
+  }
+  
+
+  /* Arquivo about.css */
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espaço entre carrossel e texto */
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+.carousel-container {
+  width: 50%; /* Largura do carrossel */
+  padding: 10px;
+}
+
+.carousel-container .carousel-inner {
+  height: 400px; /* Altura fixa para o carrossel */
+}
+
+.carousel-container .carousel-inner .carousel-item {
+  height: 100%;
+}
+
+
+.carousel-image {
+    display: block;
+    width: 100%;
+    height: 100%; /* Todas as imagens tem a mesma altura do carrossel */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    object-position: center;
+}
+
+
+.text-container {
+  width: 45%; /* Largura do container de texto */
+  padding: 10px;
+}
+
+.text-container h3 {
+  color: #333; /* Cor do título do texto */
+}
+
+.text-container p {
+  color: #666; /* Cor do parágrafo */
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+    .carousel-container,
+    .text-container {
+        width: 100%; /* Carrossel e texto ocuparão a largura total em telas menores */
+        margin-bottom: 20px; /* Espaçamento entre eles */
+      }
+      .carousel-container .carousel-inner {
+        height: 300px; /* Altura menor em telas pequenas */
+    }
+}

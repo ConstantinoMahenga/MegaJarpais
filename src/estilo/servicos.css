@@ -1,0 +1,82 @@
+#services {
+  background-color: #f8f9fa; /* Fundo claro */
+  padding: 3rem 0;
+  background: url('../imagens/cachoeiras.jpg') no-repeat center center/cover; /* Substitua pelo caminho da sua imagem */
+  color: white;
+  position: relative;
+}
+
+#services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Sombreamento para melhorar contraste do texto */
+  z-index: 1;
+}
+
+#services .container {
+  position: relative;
+  z-index: 2; /* Garantir que o texto fique acima do sombreado */
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  color: #0edf0e;
+  margin-bottom: 2rem;
+  text-align: center; /* Centraliza o título */
+}
+
+.services-content .service-item h3 {
+  font-size: 1.5rem;
+  color: #0edf0e;
+  margin-bottom: 1rem;
+  /* Não modificamos o alinhamento do título */
+}
+
+.services-content .service-item p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.4; /* Ajuste no line-height para melhorar o espaçamento */
+  margin-bottom: 1.5rem; /* Adiciona espaço entre o parágrafo e o botão */
+  text-align: justify; /* Justifica apenas o texto dos parágrafos */
+}
+
+/* Botão "Saber Mais" */
+.btn-saber-mais {
+  background-color: #28a745; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px; 
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-end; /* Alinha o botão no fundo da caixa */
+}
+
+.btn-saber-mais:hover {
+  background-color: #218838; /* Cor verde mais escura ao passar o mouse */
+}
+
+.services-content .service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .service-item h3 {
+      font-size: 1.2rem;
+  }
+
+  .service-item p {
+      font-size: 0.9rem;
+  }
+
+  .btn-saber-mais {
+      font-size: 0.9rem;
+      padding: 8px 18px;
+  }
+}

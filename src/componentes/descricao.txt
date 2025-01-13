@@ -1,0 +1,420 @@
+Apresentamos a seguir a lista dos nossos serviços:
+1. Consultoria e Projetos de Paisagismo
+• Consultoria ambiental: análise do espaço e sugestões para o uso sustentável.
+• Elaboração de projetos paisagísticos: design de jardins, áreas externas e espaços verdes, com
+consideração para o estilo, plantas e layout.
+• Planejamento de irrigação: cálculo de sistemas eficientes de irrigação, como gotejamento ou
+sprinklers.
+2. Execução de Projetos de Paisagismo
+• Implantação de jardins: plantio de gramados, arbustos, flores e árvores de acordo com o
+projeto.
+• Criação de jardins temáticos: como jardins zen, mediterrâneos, tropicais, etc.
+• Instalação de sistemas de irrigação: implementação de sistemas de irrigação adequados às
+necessidades do jardim.
+• Colocação de revestimentos e pavimentos: aplicação de pedras, pavers, deck de madeira, etc.
+• Construção de elementos decorativos: fontes, esculturas, pérgolas, caminhos de jardim, etc.
+3. Manutenção de Jardins
+• Corte de grama: manutenção periódica do gramado, incluindo corte e borda.
+• Poda e roçagem: podas de plantas, árvores e arbustos para manter o formato e o crescimento
+saudável.
+• Controle de pragas e doenças: aplicação de tratamentos preventivos ou curativos.
+• Adubação: fornecimento de nutrientes e fertilizantes adequados para as plantas.
+• Limpeza e remoção de folhas e detritos: varrição de folhas secas, galhos caídos, etc.
+• Recuperação de solos: adição de compostos ou correção do solo para melhorar a qualidade e
+promover um crescimento saudável.
+4. Instalação de Paisagismo em Áreas Externas
+• Implantação de jardins verticais: jardins em paredes ou cercas para otimizar o uso do espaço.
+• Criação de áreas de lazer e convivência: instalação de decks, móveis de jardim, pérgolas,
+churrasqueiras, etc.
+• Hortas e jardins comestíveis: planejamento e cultivo de hortas e pomares.
+• Iluminação externa: instalação de luzes para destacar o jardim à noite e melhorar a segurança.
+mailmailmail
+(+258) 82 128 5651 – 87 601 8098
+5. Projetos Especiais e Sustentáveis
+• Jardins sustentáveis: uso de plantas nativas, técnicas de captação de água pluvial e
+compostagem.
+• Projeto de jardins ecológicos: integração com a biodiversidade local e escolha de plantas
+adaptadas ao clima.
+• Telhados verdes: implantação de jardins em telhados para promover o isolamento térmico e a
+sustentabilidade.
+6. Serviços de Jardinagem Especializada
+• Cuidados com plantas raras ou exóticas: manutenção de plantas que exigem cuidados
+especiais.
+• Criação de aquários e lagos ornamentais: instalação de pequenos lagos, fontes ou aquários
+com
+plantas aquáticas.
+• Manutenção de bonsais: cuidados especializados para essas plantas que exigem poda e
+modelagem.
+7. Serviços Comerciais
+• Paisagismo corporativo: criação e manutenção de jardins e áreas externas de empresas,
+escritórios e condomínios.
+• Instalação de fachadas verdes: criação de jardins verticais ou fachada ajardinada em prédios e
+estabelecimentos comerciais.
+8. Reforma e Revitalização de Jardins
+• Revitalização de jardins antigos: renovação de espaços que precisam de novos projetos ou
+reparos.
+• Troca de plantas e realinhamento de canteiros: adaptação ao novo clima ou estação.
+• Substituição de sistemas de irrigação e drenagem: melhoria da eficiência do sistema de água
+do jardim
+
+
+
+
+
+
+
+resolva erro de mudanca de routa, mantem a estrutura de main.jsx e app.jsx separado import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App/>
+  </StrictMode>,
+)
+
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ServicosSection from './componentes/servicos'
+import Apresentacao from './servicosPage.jsx';
+// A tela de detalhes do serviço
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/servico/:servico" element={<Apresentacao />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
+// App.jsx
+import React from 'react';
+import Navbar from './componentes/navbar';
+import Footer from './componentes/footer'
+import './App.css';
+
+
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import AboutSection from './componentes/about'; 
+import ServicosSection from './componentes/servicos'
+import ContactUs from './componentes/contacto'; 
+
+
+
+
+'url(../imagens/imagem02.jpg)'
+
+function App() {
+  return (
+    
+    <div class="principal">
+      <Navbar />
+
+      <section 
+  id="home" 
+  className="hero" 
+  style={{ 
+    backgroundImage: 'url(../imagens/imagem02.jpg)', 
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center', 
+    height: '500px', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    textAlign: 'center',
+    color: '#fff', 
+    padding: '20px'
+  }}
+>
+  <div>
+    <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Bem-vindo à Mega Jarpais</h2>
+    <p style={{ fontSize: '1.5rem', marginTop: '2rem' }}>Transformando espaços hoje para um amanha mais verde e inspirador</p>
+  </div>
+</section>
+
+      <AboutSection />
+
+      
+      <ServicosSection/>
+
+      
+      <ContactUs /> 
+      <Footer></Footer>
+    </div>
+    
+  
+  );
+}
+
+export default App;
+
+import React from 'react';
+import '../estilo/servicos.css'; // Arquivo de CSS externo para estilização
+
+const ServicosSection = () => {
+  return (
+    <section id="services" className="py-5 bg-light">
+      <div className="container">
+        <h2 className="text-center mb-4">Nossos Serviços</h2>
+        <div className="services-content row justify-content-center">
+          {/* Serviço 1 */}
+          <div className="service-item col-md-6 col-lg-3 text-center mb-4">
+            <h3>I. Jardinagem</h3>
+            <p>Integer tincidunt nisi et libero varius, vel sagittis odio tempus.</p>
+            <Link to="/servico/jardinagem" className="btn-saber-mais">Saber Mais</Link>
+       
+          </div>
+
+          {/* Serviço 2 */}
+          <div className="service-item col-md-6 col-lg-3 text-center mb-4">
+            <h3>II. Paisagismo</h3>
+            <p>Integer tincidunt nisi et libero varius, vel sagittis odio tempus.</p>
+            <button className="btn-saber-mais">Saber Mais</button>
+          </div>
+
+          {/* Serviço 3 */}
+          <div className="service-item col-md-6 col-lg-3 text-center mb-4">
+            <h3>III. Manutenção</h3>
+            <p>Integer tincidunt nisi et libero varius, vel sagittis odio tempus.</p>
+            <button className="btn-saber-mais">Saber Mais</button>
+          </div>
+
+          {/* Serviço 4 */}
+          <div className="service-item col-md-6 col-lg-3 text-center mb-4">
+            <h3>IV. Consultorial</h3>
+            <p>Integer tincidunt nisi et libero varius, vel sagittis odio tempus.</p>
+            <button className="btn-saber-mais">Saber Mais</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicosSection;
+import React from "react";
+import { FaLeaf, FaHandHoldingWater, FaPaintBrush, FaTools, FaTree, FaSeedling, FaGlobe, FaHome } from "react-icons/fa";
+import Navbar from "./componentes/navbar";
+import Footer from "./componentes/footer";
+import { useParams } from 'react-router-dom';
+
+// Definindo as cores e fontes para o estilo global
+const COLORS = {
+  primary: "#2f6a3e",
+  secondary: "#a8d08d",
+  textLight: "#fff",
+  overlay: "rgba(0, 0, 0, 0.7)",
+  cardShadow: "rgba(0, 0, 0, 0.1)",
+  hoverShadow: "rgba(0, 0, 0, 0.2)",
+  cardHover: "#3d7c4c",
+};
+
+const FONT_FAMILY = "'Roboto', sans-serif";
+
+// Definindo os serviços
+const services = [
+  {
+    title: "Consultoria e Projetos de Paisagismo",
+    icon: <FaLeaf />,
+    items: [
+      "Consultoria ambiental: análise do espaço e sugestões para o uso sustentável.",
+      "Elaboração de projetos paisagísticos: design de jardins, áreas externas e espaços verdes.",
+      "Planejamento de irrigação: cálculo de sistemas eficientes de irrigação.",
+    ],
+  },
+  {
+    title: "Execução de Projetos de Paisagismo",
+    icon: <FaHandHoldingWater />,
+    items: [
+      "Implantação de jardins: plantio de gramados, arbustos, flores e árvores.",
+      "Criação de jardins temáticos: zen, mediterrâneos, tropicais, etc.",
+      "Instalação de sistemas de irrigação: adequados às necessidades do jardim.",
+      "Construção de elementos decorativos: fontes, esculturas, pérgolas, etc.",
+    ],
+  },
+  {
+    title: "Manutenção de Jardins",
+    icon: <FaTools />,
+    items: [
+      "Corte de grama: manutenção periódica do gramado.",
+      "Poda e roçagem: podas de plantas e arbustos.",
+      "Controle de pragas e doenças.",
+      "Adubação e recuperação de solos.",
+    ],
+  },
+  {
+    title: "Instalação de Paisagismo em Áreas Externas",
+    icon: <FaPaintBrush />,
+    items: [
+      "Implantação de jardins verticais.",
+      "Criação de áreas de lazer e convivência.",
+      "Hortas e jardins comestíveis.",
+      "Iluminação externa.",
+    ],
+  },
+  {
+    title: "Projetos Especiais e Sustentáveis",
+    icon: <FaTree />,
+    items: [
+      "Jardins sustentáveis: uso de plantas nativas, técnicas de captação de água pluvial e compostagem.",
+      "Projeto de jardins ecológicos: integração com a biodiversidade local e escolha de plantas adaptadas ao clima.",
+      "Telhados verdes: implantação de jardins em telhados para promover o isolamento térmico e a sustentabilidade.",
+    ],
+  },
+  {
+    title: "Serviços de Jardinagem Especializada",
+    icon: <FaSeedling />,
+    items: [
+      "Cuidados com plantas raras ou exóticas: manutenção de plantas que exigem cuidados especiais.",
+      "Criação de aquários e lagos ornamentais: instalação de pequenos lagos, fontes ou aquários com plantas aquáticas.",
+      "Manutenção de bonsais: cuidados especializados para essas plantas que exigem poda e modelagem.",
+    ],
+  },
+  {
+    title: "Serviços Comerciais",
+    icon: <FaGlobe />,
+    items: [
+      "Paisagismo corporativo: criação e manutenção de jardins e áreas externas de empresas, escritórios e condomínios.",
+      "Instalação de fachadas verdes: criação de jardins verticais ou fachada ajardinada em prédios e estabelecimentos comerciais.",
+    ],
+  },
+  {
+    title: "Reforma e Revitalização de Jardins",
+    icon: <FaHome />,
+    items: [
+      "Revitalização de jardins antigos: renovação de espaços que precisam de novos projetos ou reparos.",
+      "Troca de plantas e realinhamento de canteiros: adaptação ao novo clima ou estação.",
+      "Substituição de sistemas de irrigação e drenagem: melhoria da eficiência do sistema de água do jardim.",
+    ],
+  }
+];
+
+const ServiceDetail = () => {
+  const { servico } = useParams();  // Pega o nome do serviço da URL
+
+  // Encontrar o serviço correspondente ao parâmetro 'servico'
+  const service = services.find(s => s.title.toLowerCase().includes(servico.toLowerCase()));
+
+  if (!service) {
+    return (
+      <div style={styles.container}>
+        <Navbar />
+        <div style={styles.header}>
+          <h1 style={styles.title}>Serviço não encontrado</h1>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  return (
+    <div style={styles.container}>
+      <Navbar />
+      <div style={styles.header}>
+        <h1 style={styles.title}>{service.icon} {service.title}</h1>
+      </div>
+      <div style={styles.servicesContainer}>
+        <div style={styles.card}>
+          <div style={styles.cardHeader}>
+            <div style={styles.icon}>{service.icon}</div>
+            <h2 style={styles.cardTitle}>{service.title}</h2>
+          </div>
+          <ul style={styles.list}>
+            {service.items.map((item, idx) => (
+              <li key={idx} style={styles.listItem}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+// Estilos globais
+const styles = {
+  container: {
+    fontFamily: FONT_FAMILY,
+    backgroundImage: "url(../imagens/imagem5.jpg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between", // Garante que o footer vá para o fundo
+    minHeight: "100vh", // Garante que a altura mínima ocupe 100% da tela
+    color: COLORS.textLight,
+    padding: "20px",
+  },
+  header: {
+    textAlign: "center",
+    marginBottom: "40px",
+    backgroundColor: COLORS.overlay,
+    padding: "20px",
+    borderRadius: "10px",
+    width: "100%",
+    maxWidth: "900px",
+    margin: "0 auto", // Centraliza o header
+  },
+  title: {
+    fontSize: "2.5rem",
+    fontWeight: "600",
+    marginBottom: "10px",
+  },
+  servicesContainer: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", // Adapta o número de colunas com base no tamanho da tela
+    gap: "20px",
+    width: "100%",
+    maxWidth: "1200px",
+    margin: "0 auto", // Centraliza os cards
+    padding: "0 20px", // Garante que os cards não toquem nas bordas
+  },
+  card: {
+    backgroundColor: COLORS.primary,
+    color: COLORS.textLight,
+    borderRadius: "10px",
+    boxShadow: `0 4px 12px ${COLORS.cardShadow}`,
+    padding: "20px",
+    transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease",
+    cursor: "pointer",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  cardHeader: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "20px",
+  },
+  icon: {
+    fontSize: "2.5rem",
+    marginRight: "15px",
+    color: COLORS.secondary,
+  },
+  cardTitle: {
+    fontSize: "1.5rem",
+    fontWeight: "500",
+    textAlign: "center",
+  },
+  list: {
+    paddingLeft: "20px",
+  },
+  listItem: {
+    fontSize: "1rem",
+    marginBottom: "8px",
+    fontWeight: "300",
+  },
+};
+
+export default ServiceDetail;

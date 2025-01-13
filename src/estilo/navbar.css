@@ -1,0 +1,58 @@
+/* Navbar.css */
+.navbar {
+  background-color: #0f3d0f !important; /* Cor do footer */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.bg-transparent {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.navbar.bg-dark {
+  background-color: #0f3d0f !important; /* Manter a cor do footer */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Centralizar o conteúdo da navbar */
+.navbar .container {
+  display: flex;
+  justify-content: space-between; /* Para espaçar os elementos */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Centraliza os itens do menu */
+  width: 100%; /* Certifique-se de que a navbar ocupe toda a largura */
+}
+
+.nav-link {
+  color: white !important; /* Garante que as letras sejam brancas */
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas (opcional) */
+  padding: 10px 15px; /* Adiciona um pouco de espaço ao redor do texto */
+}
+
+/* Adiciona cor de fundo diferente quando a navbar está fixa e o usuário rola a página */
+.navbar.bg-dark .nav-link {
+  color: white !important; /* Garante que as letras sejam brancas */
+}
+
+/* Quando o item de menu é focado ou sobrevoado */
+.nav-link:hover,
+.nav-link:focus {
+  color: #0edf0e !important; /* Cor verde quando o link é hovered ou focado */
+}
+
+.navbar-toggler {
+  border-color: transparent; /* Tira a borda */
+}
+
+.navbar-toggler-icon {
+  background-color: #0f3d0f; /* Cor do menu hambúrguer */
+}
+
+.navbar.bg-dark .navbar-toggler-icon {
+  background-color: #0edf0e; /* Cor mais clara quando a navbar está em verde escuro */
+}
