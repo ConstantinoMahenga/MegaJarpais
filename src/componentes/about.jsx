@@ -11,6 +11,13 @@ const AboutSection = () => {
           {/* Div Carrossel */}
           <div className="carousel-container">
             <Carousel>
+            <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="../imagens/imagem2.jpg" // Substitua pelo caminho correto da sua imagem
+                  alt="Imagem 1"
+                />
+              </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
@@ -36,6 +43,13 @@ const AboutSection = () => {
                 <img
                   className="d-block w-100"
                   src="../imagens/imagem8.jpeg" // Substitua pelo caminho correto da sua imagem
+                  alt="Imagem 4"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="../imagens/oip.jpg" // Substitua pelo caminho correto da sua imagem
                   alt="Imagem 4"
                 />
               </Carousel.Item>

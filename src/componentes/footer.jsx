@@ -56,20 +56,21 @@ const Footer = () => {
                   +258 87 601 8098
                 </a>
               </p>
-              <p>
-              <a href="tel:+258876018098" style={styles.contactLink}>
-                  +258 87 601 8098
+              <p> <FaPhone />{" "}
+              <a href="tel:+25821285651" style={styles.contactLink}>
+                  +258 82 128 5651
                 </a>               
               </p>
               <p>
                 <FaEnvelopeOpen />{" "}
                 <a href="mailto:megajarpais@gmail.com" style={styles.contactLink}>
-                  Email: megaJa@gmail.com
+                  megaJarpais@gmail.com
                 </a>
-              </p>  <p>
+              </p>  
+              <p>
                 <FaEnvelopeOpen />{" "}
-                <a href="mailto:megajarpais@gmail.com" style={styles.contactLink}>
-                  Email: megaJa@gmail.com
+                <a href="mailto:Geral@Megajarpais.com" style={styles.contactLink}>
+                  Geral@Megajarpais.com
                 </a>
               </p>
             </ul>
@@ -158,7 +159,7 @@ const Footer = () => {
           <Col className="text-center">
             <small>
               Desenvolvido por{' '}
-              <span><a href='mailto:turing' style={{ color: '#0edf0e' }}>Turing Tech</a></span> &copy;{' '}
+              <span><a href='www.turing.co.mz' style={{ color: '#0edf0e' }}>Turing Tech</a></span> &copy;{' '}
               {new Date().getFullYear()}
             </small>
           </Col>

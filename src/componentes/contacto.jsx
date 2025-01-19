@@ -47,7 +47,12 @@ const ContactUs = () => {
                 megajarpais@gmail.com
               </a>
             </p>
-
+            <p>
+                <FaEnvelopeOpen />{" "}
+                <a href="mailto:Geral@Megajarpais.com" style={styles.contactLink}>
+                  Geral@Megajarpais.com
+                </a>
+              </p>
             <div className="social-icons">
               <a
                 href="https://web.facebook.com/people/Mega-JarPais/61571023850635/?mibextid=ZbWKwL"

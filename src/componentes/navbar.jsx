@@ -17,14 +17,14 @@ const Navbar = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg ${scrolled ? 'bg-dark navbar-dark' : 'bg-transparent navbar-light'} fixed-top`}
-      style={{ padding: '0.8rem 2rem' }} // Ajustando o padding da navbar para dar mais espaço
+      style={{ padding: '0.4rem 1rem' }} // Ajustando o padding da navbar para dar mais espaço
     >
       <div className="container">
         <a className="navbar-brand" href="#home">
           <img 
             src="../imagens/logo.png"  // Substitua pelo caminho real do seu logotipo
             alt="Logotipo" 
-            style={{ height: '250px' }} // Aumentando o tamanho do logotipo
+            style={{ height: '150px' }} // Aumentando o tamanho do logotipo
           />
         </a>
         <button
